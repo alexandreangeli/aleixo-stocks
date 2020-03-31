@@ -1,6 +1,6 @@
 # aleixo-stocks
 
-Site de "Compra de ações" fictícias da bolsa americana. Faça uma conta, e adicione ações no mercado com suas siglas, como APPL (Apple) ou MSFT (Microsoft), e então compra quantas ações desejar utilizando seu saldo inicial. 
+Site de "Compra de ações" fictícias da bolsa americana feito em Vue.js. Faça uma conta, e adicione ações no mercado com suas siglas, como APPL (Apple) ou MSFT (Microsoft), e então compra quantas ações desejar utilizando seu saldo inicial. 
 <br><br>
 Ao clicar em End day, os preços das ações variam aleatoriamente. Seu saldo e suas acões atuais podem ser salvas.
 <br><br>
