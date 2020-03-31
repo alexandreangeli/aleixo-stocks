@@ -5,7 +5,7 @@
         <div v-if="isAuthenticated && user">
             <p>Click on 'End Day' to begin a new day!</p>
             <hr>
-            <h3>Your Funds: ${{ user.funds.toFixed(2) }}</h3>
+            <h3 v-if="user.funds">Your Funds: ${{ user.funds.toFixed(2) }}</h3>
         </div>
         <div v-else>
             <p>Make a new account or login into an existing one to begin!</p>    

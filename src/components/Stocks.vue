@@ -18,7 +18,7 @@
                 Exemplos: AAPL, DELL, MSFT, AMZN, MSI, NVDA, TWTR, letras de A a Z, FB, JNJ, NETS, WMT, INTC
         <transition-group name="slide" >
 
-            <div v-if="buying && stocks[0] == ''" key='noStocks'>
+            <div v-if="buying && stocks && stocks[0] == ''" key='noStocks'>
                 <h2>No stocks in the market, please add one.</h2>
             </div>
             <div v-if="!buying && userStocks.length == 0" key='noUserStocks'>

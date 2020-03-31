@@ -4,11 +4,13 @@ const state = {
 }
 
 const getters = {
-    stocks: (state, getters, rootState) => rootState.Session.user.stocks,
+    stocks: (state, getters, rootState) => rootState.Session.user.stocks || [],
     userStocks: (state, getters) => getters.stocks.filter(stock => stock.quantidade > 0),
     searchedStocks: (state, getters) => (searchInput, buying) => {
         let toSearch = [];
-        buying ? toSearch = getters.stocks.slice(0) : toSearch = getters.userStocks.slice(0)
+        buying 
+            ? toSearch = getters.stocks.slice(0) 
+            : toSearch = getters.userStocks.slice(0)
         if(searchInput == '') return toSearch
         return toSearch.filter(stock => stock.name.toUpperCase().includes(searchInput.toUpperCase()));
     },

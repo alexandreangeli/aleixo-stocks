@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import { required, email, minLength } from 'vuelidate/lib/validators'
+import { required, email, minLength } from 'vuelidate/lib/validators'
 import { mapActions } from 'vuex';
   export default {
 

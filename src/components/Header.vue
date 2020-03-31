@@ -3,7 +3,7 @@
   <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="header" :class="{'menuCollapsed': !isCollapsed, 'menuNotCollapsed:': isCollapsed}"> 
     <div class="container">
       <div class="row col-centered">   
-          <div v-if="isAuthenticated && user" class="navbar-toggler nav-item col col-centered m-2">
+          <div v-if="isAuthenticated && user && user.funds" class="navbar-toggler nav-item col col-centered m-2">
             <a class="nav-link disabled text-nowrap text-center" href="#">Funds: ${{ user.funds.toFixed(2)  }}</a>
           </div>
           <button @click="collapse" ref="collapseButton" class="navbar-toggler col col-centered m-2" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +16,7 @@
         <ul class="navbar-nav mr-auto">
 
           <router-link tag="li" to="/" class="nav-item">
-            <a class="nav-link text-nowrap text-center">AleixoST</a>
+            <a class="nav-link text-nowrap text-center">Aleixo Stocks</a>
           </router-link>
 
           <router-link v-if="isAuthenticated" tag="li" to="/portfolio" class="nav-item">
@@ -31,7 +31,7 @@
 
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav mx-auto nav-flex-icons">
-          <li v-if="isAuthenticated && user" class="nav-item">
+          <li v-if="isAuthenticated && user && user.funds" class="nav-item">
             <a class="nav-link disabled text-nowrap text-center" href="#">Funds: ${{ user.funds.toFixed(2)  }}</a>
           </li> 
         </ul>

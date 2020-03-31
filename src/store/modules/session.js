@@ -45,7 +45,8 @@ const actions = {
             let users = res.data;
             for(let key in users) {
                 if(users[key].userId == state.userId) {
-                    if(users[key].key == '') users[key].key = key;
+                    if(users[key].key == '') 
+                        users[key].key = key;
                     commit('loadUser', users[key]);
                     break;
                 }
@@ -142,8 +143,6 @@ const actions = {
             key: ''
         };
         let token = state.idToken;
-        let test = res;
-        debugger;
         await Axios.post('https://stock-trader-54144.firebaseio.com/users.json?auth=' + token, userPadrao
         ).then(res => {
             dispatch('loadUser');
