@@ -5,6 +5,8 @@ Site de "Compra de ações" fictícias da bolsa americana feito em Vue.js. Faça
 Ao clicar em End day, os preços das ações variam aleatoriamente. Seu saldo e suas acões atuais podem ser salvas.
 <br><br>
 Os preços inicias das ações são os valores reais recebidos da IEX Cloud API, e as imagens das ações são recebidas pela api de imagens do Wikipedia, utilizando os nomes completos das empresas.
+<br><br>
+O projeto pode ser acessado em produção pela URL https://aleixostocks.netlify.app<br/>
 
 ## Project setup
 ```
